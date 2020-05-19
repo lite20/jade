@@ -7,13 +7,14 @@ public class InputRotate : MonoBehaviour
 {
     private InputSys controls;
 
+    // TODO: smooth with lerping
     public void Awake()
     {
         controls = new InputSys();
         controls.Enable();
         controls.Player.Move.performed += ctx => Rotate(ctx);
     }
-    
+
     private void Rotate(InputAction.CallbackContext ctx)
     {
         Vector2 dir = ctx.ReadValue<Vector2>();
