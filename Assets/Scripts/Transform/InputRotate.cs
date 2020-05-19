@@ -5,9 +5,12 @@ using UnityEngine.InputSystem;
 
 public class InputRotate : MonoBehaviour
 {
+    public float lerpFactor = 0.1f;
+
     private InputSys controls;
 
-    // TODO: smooth with lerping
+    private float targetAngle = 0.0f;
+
     public void Awake()
     {
         controls = new InputSys();
@@ -15,12 +18,17 @@ public class InputRotate : MonoBehaviour
         controls.Player.Move.performed += ctx => Rotate(ctx);
     }
 
+    public void Update()
+    {
+        Vector3 rot = transform.eulerAngles;
+        rot.y = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle, lerpFactor);
+        transform.eulerAngles = rot;
+    }
+
     private void Rotate(InputAction.CallbackContext ctx)
     {
-        Vector2 dir = ctx.ReadValue<Vector2>();
-        float angle = -Vector2.SignedAngle(Vector2.up, dir);
-        Vector3 rot = transform.eulerAngles;
-        rot.y = angle;
-        transform.eulerAngles = rot;
+        targetAngle = -Vector2.SignedAngle(
+            Vector2.up, ctx.ReadValue<Vector2>()
+        );
     }
 }
