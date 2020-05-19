@@ -352,8 +352,8 @@ GameObject:
   - component: {fileID: 823804187}
   - component: {fileID: 823804188}
   - component: {fileID: 823804189}
-  - component: {fileID: 823804191}
   - component: {fileID: 823804190}
+  - component: {fileID: 823804191}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -939,6 +939,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1832244321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832244318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5fa34f07f80a44ea6272b6fe4ee833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1904523268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,13 +1028,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904523268}
-  m_LocalRotation: {x: 0.38215894, y: 0.048352063, z: -0.02002808, w: 0.9226134}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 7, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 823804187}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 6, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &1904523272
 MonoBehaviour:
   m_ObjectHideFlags: 0
