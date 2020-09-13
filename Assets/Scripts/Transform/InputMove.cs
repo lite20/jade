@@ -18,6 +18,7 @@ public class InputMove : MonoBehaviour
         controls = new InputSys();
         controls.Enable();
         controls.Player.Move.started   += ctx => Move(ctx);
+        controls.Player.Move.started   += ctx => Move(ctx);
         controls.Player.Move.performed += ctx => Move(ctx);
         controls.Player.Move.canceled  += ctx => MoveEnd();
     }
