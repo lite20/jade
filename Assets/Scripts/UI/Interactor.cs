@@ -29,6 +29,8 @@ public class Interactor : MonoBehaviour
 
         // TODO: instantiate label prefab
         Debug.Log("[E] " + labelText);
+
+        // save the thing that's currently interactable in a variable
     }
 
     private void DestroyLabel(GameObject obj)
